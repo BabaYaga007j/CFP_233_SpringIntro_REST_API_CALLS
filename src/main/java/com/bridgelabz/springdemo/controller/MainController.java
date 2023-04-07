@@ -32,4 +32,11 @@ public class MainController {
         //return "FirstName: "+user.getFirstName() + "LastName : "+user.getLastName();
         return user.toString();
     }
+    //UC5
+    //PUT request method is used,first name as path variable and last name as QueryParameter are implemented
+    @PutMapping("/put/{firstName}")
+    public String put(@PathVariable String firstName,
+                      @RequestParam(value = "lastName") String lastName) {
+        return "Hello " + firstName + " " + lastName;
+    }
 }
