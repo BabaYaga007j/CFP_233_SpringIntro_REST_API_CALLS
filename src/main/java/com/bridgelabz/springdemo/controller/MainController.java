@@ -18,4 +18,10 @@ public class MainController {
 
          return "Hello "+name;
      }
+     //UC3
+     @RequestMapping (value="/path/{name}",method = RequestMethod.GET)
+     public String message2(@PathVariable String name)
+    {
+        return "Hello "+name;
+    }
 }
