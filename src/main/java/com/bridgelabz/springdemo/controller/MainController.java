@@ -1,6 +1,7 @@
 package com.bridgelabz.springdemo.controller;
 
 
+import com.bridgelabz.springdemo.model.User;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -23,5 +24,12 @@ public class MainController {
      public String message2(@PathVariable String name)
     {
         return "Hello "+name;
+    }
+    //UC4
+    @RequestMapping (value="/body",method = RequestMethod.POST)
+    public String acceptData(@RequestBody User user)
+    {
+        //return "FirstName: "+user.getFirstName() + "LastName : "+user.getLastName();
+        return user.toString();
     }
 }
